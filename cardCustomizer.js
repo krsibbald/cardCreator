@@ -60,11 +60,35 @@
   };
   var reactivityNotesInput = document.getElementById('reactivityNotes');
   var reactivityNotesUpdate = function(event){
-    var cardReactivityNotes = document.getElementsByClassName('cardReactivityNotes');
-    var reactivityNotesToShow = event.target.value;
-    for(var i = 0; i < cardReactivityNotes.length; i++){
-      cardReactivityNotes[i].innerHTML = reactivityNotesToShow;
-    }
+  var cardReactivityNotes = document.getElementsByClassName('cardReactivityNotes');
+  var reactivityNotesToShow = event.target.value;
+  var specialWordsArr = [['alcohols', 'Alcohols'],
+    ['alkene', 'Alkene'],
+    ['alkylHalide', 'Alkyl halide'],
+    ['carbonyl', 'Carbonyl'],
+    ['catalyst', 'Catalyst'],
+    ['chlorinatingReagent', 'Chlorinating Reagent'],
+    ['electrophile', 'Electrophile'],
+    ['metal', 'Metal'],
+    ['oxidant', ' Oxidant '],
+    ['reducingAgent', 'Reducing Agent'],
+    ['strongAcid', 'Strong Acid'],
+    ['strongBase', 'Strong Base'],
+    ['strongNucleophile', 'Strong Nucleophile'],
+    ['weakAcid', 'Weak Acid'],
+    ['weakBase', 'Weak Base'],
+    ['weakNucleophile', 'Weak Nucleophile']];
+
+  for(var i = 0; i < specialWordsArr.length; i++){
+    var wordToFind = specialWordsArr[i][1];
+    var wordToShow = reagentToShow(specialWordsArr[i][0]);
+    reactivityNotesToShow = reactivityNotesToShow.replace(wordToFind, wordToShow);  
+    reactivityNotesToShow = reactivityNotesToShow.replace(wordToFind.toLowerCase(), wordToShow);
+  }
+
+  for(var i = 0; i < cardReactivityNotes.length; i++){
+    cardReactivityNotes[i].innerHTML = reactivityNotesToShow;
+  }
   };
   reactivityNotesInput.onchange = function(event){
     reactivityNotesUpdate(event);
