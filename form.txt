@@ -1,56 +1,64 @@
 <form>
-  <div>
-    <label for='points'>Points</label><select size = '1' width = '10' id='points' name='points'> 
-      <option value=''> </option>
-      <option value=1> 1 </option>
-      <option value=2> 2 </option>
-      <option value=3> 3 </option>
-      <option value=4> 4 </option>
-      <option value=5> 5 </option>
-    </select>
-
-    <label for='name'>Name</label><input type='text' id= 'name' name='name'>
-
-    <label for='reagentType1'>ReagentType1</label><select size = '1' width = '50' id = 'reagentType1' name='reagentType1'>
-      <option value = 'alcohols'>Alcohols</option>
-      <option value = 'alkene'>Alkene</option>
-      <option value = 'alkylHalide'> Alkyl halide </option>
-      <option value = 'carbonyl'>Carbonyl</option>
-      <option value = 'catalyst'> Catalyst </option>
-      <option value = 'chlorinatingReagent'> Chlorinating Reagent </option>
-      <option value = 'electrophile'> Electrophile </option>
-      <option value = 'metal'> Metal </option>
-      <option value = 'oxidant'> Oxidant </option>
-      <option value = 'reducingAgent'>Reducing Agent</option>
-      <option value = 'strongAcid'> Strong Acid </option>
-      <option value = 'strongBase'>Strong Base</option>
-      <option value = 'strongNucleophile'> Strong Nucleophile </option>
-      <option value = 'weakAcid'>Weak Acid</option>
-      <option value = 'weakBase'>Weak Base</option>
-      <option value = 'weakNucleophile'>Weak Nucleophile</option>      
-    </select>
-
-    <label for='reagentType2'>ReagentType2</label><select size = '1' width = '50' id= 'reagentType2' name 'reagentType2'>
-      <option value = ''> </option>
-      <option value = 'alcohols'>Alcohols</option>
-      <option value = 'alkene'>Alkene</option>
-      <option value = 'alkylHalide'> Alkyl halide </option>
-      <option value = 'carbonyl'>Carbonyl</option>
-      <option value = 'catalyst'> Catalyst </option>
-      <option value = 'chlorinatingReagent'> Chlorinating Reagent </option>
-      <option value = 'electrophile'> Electrophile </option>
-      <option value = 'metal'> Metal </option>
-      <option value = 'oxidant'> Oxidant </option>
-      <option value = 'reducingAgent'>Reducing Agent</option>
-      <option value = 'strongAcid'> Strong Acid </option>
-      <option value = 'strongBase'>Strong Base</option>
-      <option value = 'strongNucleophile'> Strong Nucleophile </option>
-      <option value = 'weakAcid'>Weak Acid</option>
-      <option value = 'weakBase'>Weak Base</option>
-      <option value = 'weakNucleophile'>Weak Nucleophile</option>      
-    </select>
-    
-    <label for='reactivityNotes'> Reactivity Notes </label><input type='text' id='reactivityNotes' name='reactivityNotes'>
+  <div.cardForm>
+    <fieldset class='points'>
+      <label for='points'>Points</label><select size = '1' width = '10' id='points' name='points'> 
+        <option value=''> </option>
+        <option value=1> 1 </option>
+        <option value=2> 2 </option>
+        <option value=3> 3 </option>
+        <option value=4> 4 </option>
+        <option value=5> 5 </option>
+      </select>
+    </fieldset>
+    <fieldset class='name'>
+      <label for='name'>Name</label><input type='text' id= 'name' name='name'>
+    </fieldset>
+    <fieldset class='reagentType1'>
+      <label for='reagentType1'>ReagentType1</label><select size = '1' width = '50' id = 'reagentType1' name='reagentType1'>
+        <option value = 'reagentType1'> </option>
+        <option value = 'alcohols'>Alcohols</option>
+        <option value = 'alkene'>Alkene</option>
+        <option value = 'alkylHalide'> Alkyl halide </option>
+        <option value = 'carbonyl'>Carbonyl</option>
+        <option value = 'catalyst'> Catalyst </option>
+        <option value = 'chlorinatingReagent'> Chlorinating Reagent           </option>
+        <option value = 'electrophile'> Electrophile </option>
+        <option value = 'metal'> Metal </option>
+        <option value = 'oxidant'> Oxidant </option>
+        <option value = 'reducingAgent'>Reducing Agent</option>
+        <option value = 'strongAcid'> Strong Acid </option>
+        <option value = 'strongBase'>Strong Base</option>
+        <option value = 'strongNucleophile'> Strong Nucleophile </option>
+        <option value = 'weakAcid'>Weak Acid</option>
+        <option value = 'weakBase'>Weak Base</option>
+        <option value = 'weakNucleophile'>Weak Nucleophile</option>      
+      </select>
+    </fieldset>
+    <fieldset class='reagentType2'>
+      <label for='reagentType2'>ReagentType2</label><select size = '1' width = '50' id= 'reagentType2' name 'reagentType2'>
+        <option value = ''> </option>
+        <option value = ''> None </option>
+        <option value = 'alcohols'>Alcohols</option>
+        <option value = 'alkene'>Alkene</option>
+        <option value = 'alkylHalide'> Alkyl halide </option>
+        <option value = 'carbonyl'>Carbonyl</option>
+        <option value = 'catalyst'> Catalyst </option>
+        <option value = 'chlorinatingReagent'> Chlorinating Reagent </option>
+        <option value = 'electrophile'> Electrophile </option>
+        <option value = 'metal'> Metal </option>
+        <option value = 'oxidant'> Oxidant </option>
+        <option value = 'reducingAgent'>Reducing Agent</option>
+        <option value = 'strongAcid'> Strong Acid </option>
+        <option value = 'strongBase'>Strong Base</option>
+        <option value = 'strongNucleophile'> Strong Nucleophile </option>
+        <option value = 'weakAcid'>Weak Acid</option>
+        <option value = 'weakBase'>Weak Base</option>
+        <option value = 'weakNucleophile'>Weak Nucleophile</option>      
+      </select>
+    </fieldset>
+    <fieldset class='reactivityNotes'>
+      <label for='reactivityNotes'> Reactivity Notes </label><textarea rows='4' cols='25' id='reactivityNotes' name='reactivityNotes'></textarea>
+    </fieldset>
   </div>
 </form>
 <hr>
@@ -67,7 +75,7 @@
    pointsDrop.onchange = function(event){
      var pointsNum = document.getElementById('pointsNum');
      var pointsToShow = event.target.value;
-     str = ""
+     str = "";
      if (pointsToShow == 1) {
       ans = pointsToShow + " point";
      }
@@ -76,8 +84,60 @@
       }
      pointsNum.innerHTML = ans;
    };
+  var reagentToShow = function(reagentName){
+    if (reagentName == undefined){
+      return '';
+    }else{
+     var displayName = reagentName.charAt(0).toUpperCase()+reagentName.slice(1).replace(/([A-Z])/g, ' $1').trim()
+     return '<span class='+reagentName+'>'+displayName+'</span>';
+    }
+  };
   var reagentType1Drop = document.getElementById('reagentType1');
   reagentType1Drop.onchange = function(event){
-    alert('fish');
+    var cardReagentType1 = document.getElementById('cardReagentType1');
+    var reagentToShow1 = reagentToShow(event.target.value);
+    cardReagentType1.innerHTML = reagentToShow1;
+  };
+  var reagentType2Drop = document.getElementById('reagentType2');
+  reagentType2Drop.onchange = function(event){
+    var cardReagentType2 = document.getElementById('cardReagentType2');
+    var reagentToShow2 = reagentToShow(event.target.value);
+    cardReagentType2.innerHTML = reagentToShow2;
+  };
+  var nameInput = document.getElementById('name');
+  var nameUpdate = function(event){
+    var cardName = document.getElementById('cardName');
+    var nameToShow = event.target.value;
+    cardName.innerHTML = nameToShow;
+  };
+  nameInput.onchange = function(event){
+    nameUpdate(event);
+  };
+  nameInput.oninput = function(event){
+    nameUpdate(event);
+  };
+  nameInput.onpaste = function(event){
+    nameUpdate(event);
+  };
+  nameInput.keypress = function(event){
+    nameUpdate(event);
+  };
+  var reactivityNotesInput = document.getElementById('reactivityNotes');
+  var reactivityNotesUpdate = function(event){
+    var cardReactivityNotes = document.getElementById('cardReactivityNotes');
+    var reactivityNotesToShow = event.target.value;
+    cardReactivityNotes.innerHTML = reactivityNotesToShow;
+  };
+  reactivityNotesInput.onchange = function(event){
+    reactivityNotesUpdate(event);
+  };
+  reactivityNotesInput.oninput = function(event){
+    reactivityNotesUpdate(event);
+  };
+  reactivityNotesInput.onpaste = function(event){
+    reactivityNotesUpdate(event);
+  };
+  reactivityNotesInput.keypress = function(event){
+    reactivityNotesUpdate(event);
   };
 </script>
