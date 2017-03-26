@@ -84,7 +84,6 @@
   </div>
 </div>
 <div id='additionalCards'>
-  fish
 </div>
 
 
@@ -173,9 +172,12 @@
   numOfCopiesDrop.onchange = function(event){
      var copiesToShow = event.target.value;
      var cardHTML = document.getElementById('firstCard').getElementsByClassName("card")[0];
-     var copyNode = cardHTML.cloneNode(true);
      var additionalCards = document.getElementById('additionalCards');
-     additionalCards.appendChild(copyNode);
+     additionalCards.innerHTML = '';
      
+     for(var i = 1; i < copiesToShow; i++){
+       var copyNode = cardHTML.cloneNode(true);
+       additionalCards.appendChild(copyNode);
+     }
    };
 </script>
