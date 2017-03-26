@@ -69,21 +69,24 @@
         <option value=6> 6 </option>
         <option value=7> 7 </option>
         <option value=8> 8 </option>
+        <option value=9> 9 </option>
       </select>
     </fieldset>
   </div>
 </form>
 <hr>
-<div id='firstCard'>
-  <div class='card'>
-    <div class='cardPoints'> <span class='pointsNum'>points</span> </div>
-    <div class='cardName'> Name </div>
-    <div class='cardReagentType1'> Reagent Type1 </div>
-    <div class='cardReagentType2'> Reagent Type2 </div>
-    <div class='cardReactivityNotes'> Reactivity Notes </div>
+<div id='output'>
+  <div id='firstCard'>
+    <div class='card'>
+      <div class='cardPoints'> <span class='pointsNum'>points</span> </div>
+      <div class='cardName'> Name </div>
+      <div class='cardReagentType1'> Reagent Type1 </div>
+      <div class='cardReagentType2'> Reagent Type2 </div>
+      <div class='cardReactivityNotes'> Reactivity Notes </div>
+    </div>  
   </div>
-</div>
-<div id='additionalCards'>
+  <div id='additionalCards'>
+  </div>
 </div>
 
 
@@ -172,10 +175,11 @@
   numOfCopiesDrop.onchange = function(event){
      var copiesToShow = event.target.value;
      var cardHTML = document.getElementById('firstCard').getElementsByClassName("card")[0];
+     document.getElementById('firstCard').className = 'hidden';
      var additionalCards = document.getElementById('additionalCards');
      additionalCards.innerHTML = '';
      
-     for(var i = 1; i < copiesToShow; i++){
+     for(var i = 0; i < copiesToShow; i++){
        var copyNode = cardHTML.cloneNode(true);
        additionalCards.appendChild(copyNode);
      }

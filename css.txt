@@ -1,31 +1,36 @@
-div#card{
+div.card{
   border-style: solid;
   width: 190px;
   height: 336px;
   border-color: #EFEFEF;
   padding: 25px;
   position: relative;
-
+  display: inline-block;
 }
 
-div#cardPoints{
+div.cardPoints{
   text-align: center;
   font-size: 16px;
   font-weight: 700;
  
 }
-div#cardName{
+
+.hidden{
+  display: none;
+}
+
+div.cardName{
   font-size: 16px;
 }
-div#cardReagentType1{
+div.cardReagentType1{
   font-size: 12px;
   font-weight: 700;
 }
-div#cardReagentType2{
+div.cardReagentType2{
   font-size: 12px;
   font-weight: 700;
 }
-div#cardReactivityNotes{
+div.cardReactivityNotes{
   font-size: 12px;
   position: absolute;
   bottom: 0;
@@ -34,9 +39,10 @@ div#cardReactivityNotes{
 }
 fieldset{
   margin: 10px;
-  height: 75px;
+  min-height: 75px;
   float: left;
 }
+
 span.alcohols{
   color: #FC4A88;
 }
