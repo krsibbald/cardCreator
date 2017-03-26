@@ -1,0 +1,78 @@
+div#card{
+  border-style: solid;
+  width: 190px;
+  height: 336px;
+  border-color: #EFEFEF;
+  padding: 25px;
+  position: relative;
+
+}
+
+div#cardPoints{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+ 
+}
+div#cardName{
+  font-size: 16px;
+}
+div#cardReagentType1{
+  font-size: 12px;
+  font-weight: 700;
+}
+div#cardReagentType2{
+  font-size: 12px;
+  font-weight: 700;
+}
+div#cardReactivityNotes{
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  max-height: 100px;
+}
+fieldset{
+  margin: 10px;
+  height: 75px;
+  float: left;
+}
+span.alcohols{
+  color: #FC4A88;
+}
+span.alkene{
+  color: #149FEB;
+}
+span.alkylHalide{
+  color: #18A53F;
+}
+span.carbonyl{
+  color: #5A6EA4;
+}
+span.catalyst{
+  color: #000000;
+}
+span.chlorinatingReagent{
+  color: #050505;
+}
+span.electrophile{
+  color: #095AB3;
+}  
+span.metal{
+  color: #000000;
+}
+span.oxidant{
+  color: #532600;
+}
+span.reducingAgent{
+  color: #775E09;
+}
+span.strongAcid, span.weakAcid{
+  color: #FDB50A;
+}
+span.strongBase, span.weakBase{
+  color: #5B198F;
+}
+span.strongNucleophile, span.weakNucleophile{
+  color: #FB0006;
+}

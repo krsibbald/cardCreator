@@ -1,0 +1,83 @@
+<form>
+  <div>
+    <label for='points'>Points</label><select size = '1' width = '10' id='points' name='points'> 
+      <option value=''> </option>
+      <option value=1> 1 </option>
+      <option value=2> 2 </option>
+      <option value=3> 3 </option>
+      <option value=4> 4 </option>
+      <option value=5> 5 </option>
+    </select>
+
+    <label for='name'>Name</label><input type='text' id= 'name' name='name'>
+
+    <label for='reagentType1'>ReagentType1</label><select size = '1' width = '50' id = 'reagentType1' name='reagentType1'>
+      <option value = 'alcohols'>Alcohols</option>
+      <option value = 'alkene'>Alkene</option>
+      <option value = 'alkylHalide'> Alkyl halide </option>
+      <option value = 'carbonyl'>Carbonyl</option>
+      <option value = 'catalyst'> Catalyst </option>
+      <option value = 'chlorinatingReagent'> Chlorinating Reagent </option>
+      <option value = 'electrophile'> Electrophile </option>
+      <option value = 'metal'> Metal </option>
+      <option value = 'oxidant'> Oxidant </option>
+      <option value = 'reducingAgent'>Reducing Agent</option>
+      <option value = 'strongAcid'> Strong Acid </option>
+      <option value = 'strongBase'>Strong Base</option>
+      <option value = 'strongNucleophile'> Strong Nucleophile </option>
+      <option value = 'weakAcid'>Weak Acid</option>
+      <option value = 'weakBase'>Weak Base</option>
+      <option value = 'weakNucleophile'>Weak Nucleophile</option>      
+    </select>
+
+    <label for='reagentType2'>ReagentType2</label><select size = '1' width = '50' id= 'reagentType2' name 'reagentType2'>
+      <option value = ''> </option>
+      <option value = 'alcohols'>Alcohols</option>
+      <option value = 'alkene'>Alkene</option>
+      <option value = 'alkylHalide'> Alkyl halide </option>
+      <option value = 'carbonyl'>Carbonyl</option>
+      <option value = 'catalyst'> Catalyst </option>
+      <option value = 'chlorinatingReagent'> Chlorinating Reagent </option>
+      <option value = 'electrophile'> Electrophile </option>
+      <option value = 'metal'> Metal </option>
+      <option value = 'oxidant'> Oxidant </option>
+      <option value = 'reducingAgent'>Reducing Agent</option>
+      <option value = 'strongAcid'> Strong Acid </option>
+      <option value = 'strongBase'>Strong Base</option>
+      <option value = 'strongNucleophile'> Strong Nucleophile </option>
+      <option value = 'weakAcid'>Weak Acid</option>
+      <option value = 'weakBase'>Weak Base</option>
+      <option value = 'weakNucleophile'>Weak Nucleophile</option>      
+    </select>
+    
+    <label for='reactivityNotes'> Reactivity Notes </label><input type='text' id='reactivityNotes' name='reactivityNotes'>
+  </div>
+</form>
+<hr>
+<div id='card'>
+  <div id='cardPoints'> <span id='pointsNum'>points</span> </div>
+  <div id='cardName'> Name </div>
+  <div id='cardReagentType1'> Reagent Type1 </div>
+  <div id='cardReagentType2'> Reagent Type2 </div>
+  <div id='cardReactivityNotes'> Reactivity Notes </div>
+</div>
+
+<script language='JavaScript'>
+   var pointsDrop = document.getElementById("points");
+   pointsDrop.onchange = function(event){
+     var pointsNum = document.getElementById('pointsNum');
+     var pointsToShow = event.target.value;
+     str = ""
+     if (pointsToShow == 1) {
+      ans = pointsToShow + " point";
+     }
+     else{
+      ans = pointsToShow + " points";
+      }
+     pointsNum.innerHTML = ans;
+   };
+  var reagentType1Drop = document.getElementById('reagentType1');
+  reagentType1Drop.onchange = function(event){
+    alert('fish');
+  };
+</script>
