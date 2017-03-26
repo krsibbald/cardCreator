@@ -64,7 +64,7 @@
   var reactivityNotesToShow = event.target.value;
   var specialWordsArr = [['alcohols', 'Alcohols'],
     ['alkene', 'Alkene'],
-    ['alkylHalide', 'Alkyl halide'],
+    ['alkylHalide', 'Alkyl Halide'],
     ['carbonyl', 'Carbonyl'],
     ['catalyst', 'Catalyst'],
     ['chlorinatingReagent', 'Chlorinating Reagent'],
