@@ -8,4 +8,7 @@ Then allow the user to customize the
 - second reagent type (optional)
 - reactivity notes (optional)
 
-- Then for the user to be able to make multiple copies of the card (up to 9)
+Additional Abilities
+- make multiple copies of the card (up to 9)
+- reagent words are highlighted in their appropriate color if added to notes
+  * (e.g. 'This is an alkene', would display 'This is an Alkene' with the word 'Alkene' in light blue)
