@@ -21,7 +21,7 @@
         <option value = 'alkylHalide'> Alkyl halide </option>
         <option value = 'carbonyl'>Carbonyl</option>
         <option value = 'catalyst'> Catalyst </option>
-        <option value = 'chlorinatingReagent'> Chlorinating Reagent           </option>
+        <option value = 'chlorinatingReagent'> Chlorinating Reagent</option>
         <option value = 'electrophile'> Electrophile </option>
         <option value = 'metal'> Metal </option>
         <option value = 'oxidant'> Oxidant </option>
@@ -59,21 +59,39 @@
     <fieldset class='reactivityNotes'>
       <label for='reactivityNotes'> Reactivity Notes </label><textarea rows='4' cols='25' id='reactivityNotes' name='reactivityNotes'></textarea>
     </fieldset>
+    <fieldset>
+      <label for='numOfCopies'>Number of Copies</label><select size = '1' width = '10' id='numOfCopies' name='numOfCopies'> 
+        <option value=1> 1 </option>
+        <option value=2> 2 </option>
+        <option value=3> 3 </option>
+        <option value=4> 4 </option>
+        <option value=5> 5 </option>
+        <option value=6> 6 </option>
+        <option value=7> 7 </option>
+        <option value=8> 8 </option>
+      </select>
+    </fieldset>
   </div>
 </form>
 <hr>
-<div id='card'>
-  <div id='cardPoints'> <span id='pointsNum'>points</span> </div>
-  <div id='cardName'> Name </div>
-  <div id='cardReagentType1'> Reagent Type1 </div>
-  <div id='cardReagentType2'> Reagent Type2 </div>
-  <div id='cardReactivityNotes'> Reactivity Notes </div>
+<div id='firstCard'>
+  <div class='card'>
+    <div class='cardPoints'> <span class='pointsNum'>points</span> </div>
+    <div class='cardName'> Name </div>
+    <div class='cardReagentType1'> Reagent Type1 </div>
+    <div class='cardReagentType2'> Reagent Type2 </div>
+    <div class='cardReactivityNotes'> Reactivity Notes </div>
+  </div>
 </div>
+<div id='additionalCards'>
+  fish
+</div>
+
 
 <script language='JavaScript'>
    var pointsDrop = document.getElementById("points");
    pointsDrop.onchange = function(event){
-     var pointsNum = document.getElementById('pointsNum');
+     var pointsNums = document.getElementsByClassName('pointsNum');
      var pointsToShow = event.target.value;
      str = "";
      if (pointsToShow == 1) {
@@ -82,7 +100,9 @@
      else{
       ans = pointsToShow + " points";
       }
-     pointsNum.innerHTML = ans;
+     for(var i = 0; i < pointsNums.length; i++){
+       pointsNums[i].innerHTML = ans;
+     }
    };
   var reagentToShow = function(reagentName){
     if (reagentName == undefined){
@@ -94,21 +114,27 @@
   };
   var reagentType1Drop = document.getElementById('reagentType1');
   reagentType1Drop.onchange = function(event){
-    var cardReagentType1 = document.getElementById('cardReagentType1');
+    var cardReagentType1s = document.getElementsByClassName('cardReagentType1');
     var reagentToShow1 = reagentToShow(event.target.value);
-    cardReagentType1.innerHTML = reagentToShow1;
+    for(var i = 0; i < cardReagentType1s.length; i++){
+      cardReagentType1s[i].innerHTML = reagentToShow1;
+    }
   };
   var reagentType2Drop = document.getElementById('reagentType2');
   reagentType2Drop.onchange = function(event){
-    var cardReagentType2 = document.getElementById('cardReagentType2');
+    var cardReagentType2s = document.getElementsByClassName('cardReagentType2');
     var reagentToShow2 = reagentToShow(event.target.value);
-    cardReagentType2.innerHTML = reagentToShow2;
+    for(var i = 0; i < cardReagentType2s.length; i++){
+      cardReagentType2s[i].innerHTML = reagentToShow2;
+    }
   };
   var nameInput = document.getElementById('name');
   var nameUpdate = function(event){
-    var cardName = document.getElementById('cardName');
+    var cardNames = document.getElementsByClassName('cardName');
     var nameToShow = event.target.value;
-    cardName.innerHTML = nameToShow;
+    for(var i=0; i < cardNames.length; i++){
+      cardNames[i].innerHTML = nameToShow;
+    }
   };
   nameInput.onchange = function(event){
     nameUpdate(event);
@@ -124,9 +150,11 @@
   };
   var reactivityNotesInput = document.getElementById('reactivityNotes');
   var reactivityNotesUpdate = function(event){
-    var cardReactivityNotes = document.getElementById('cardReactivityNotes');
+    var cardReactivityNotes = document.getElementsByClassName('cardReactivityNotes');
     var reactivityNotesToShow = event.target.value;
-    cardReactivityNotes.innerHTML = reactivityNotesToShow;
+    for(var i = 0; i < cardReactivityNotes.length; i++){
+      cardReactivityNotes[i].innerHTML = reactivityNotesToShow;
+    }
   };
   reactivityNotesInput.onchange = function(event){
     reactivityNotesUpdate(event);
@@ -140,4 +168,14 @@
   reactivityNotesInput.keypress = function(event){
     reactivityNotesUpdate(event);
   };
+
+  var numOfCopiesDrop = document.getElementById("numOfCopies");
+  numOfCopiesDrop.onchange = function(event){
+     var copiesToShow = event.target.value;
+     var cardHTML = document.getElementById('firstCard').getElementsByClassName("card")[0];
+     var copyNode = cardHTML.cloneNode(true);
+     var additionalCards = document.getElementById('additionalCards');
+     additionalCards.appendChild(copyNode);
+     
+   };
 </script>
